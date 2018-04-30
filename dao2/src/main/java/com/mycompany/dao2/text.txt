@@ -1,0 +1,4 @@
+employee{id=1, firstname=Meba, lastname=Dawit, ssn=666-77-8888, salary=32000.0}
+employee{id=2, firstname=Caleb, lastname=David, ssn=342-71-2342, salary=72000.0}
+employee{id=3, firstname=Mimi, lastname=HMay, ssn=341-77-8888, salary=82000.0}
+employee{id=4, firstname=Heldana, lastname=Michael, ssn=432-77-3412, salary=32000.0}
