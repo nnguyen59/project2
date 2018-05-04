@@ -10,7 +10,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
-import static javax.script.ScriptEngine.FILENAME;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
@@ -29,9 +28,9 @@ public class testMain {
                 "Spring-Module.xml");
 
         employeeDAO manager = (employeeDAO) context.getBean("msemployeDAO");
-
+List<employee> customerAs = manager.findAll();
         Scanner scanner = new Scanner(System.in);
-        List<employee> customerAs = manager.findAll();
+       
         while (true) {
 
             System.out.println("1. View data ");
@@ -44,6 +43,7 @@ public class testMain {
             int option = Integer.parseInt(scanner.nextLine());
             switch (option) {
                 case 1:
+                     customerAs = manager.findAll();
                     for (employee cust : customerAs) {
                         System.out.println("Employee : " + cust.toString());
                     }
